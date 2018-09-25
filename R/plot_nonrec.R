@@ -38,10 +38,10 @@ plot_nonrec64 <- function(df, Am=max(df$Photo)-min(df$Photo), Rd=min(df$Photo), 
     y <- unlist(pmap(paras, fun_nonrec))
     
     plot_data <- data.frame(x = rep(lrc_Q, n + 1), y = c(lrc_A, y), 
-                            a = factor(c(rep("measured", n), alpn),
+                            alpha = factor(c(rep("measured", n), alpn),
                                        level = c("measured", alp)))
     
-    plot64 <- ggplot(data = plot_data, aes(x, y, group = a, color=a)) + 
+    plot64 <- ggplot(data = plot_data, aes(x, y, group = alpha, color=alpha)) + 
       geom_point() + 
       geom_smooth(se = FALSE) + theme_bw()
     
@@ -67,10 +67,10 @@ plot_nonrec68 <- function(df, Am=max(df$A)-min(df$A), Rd=min(df$A), alpha = 0.01
   y <- unlist(pmap(paras, fun_nonrec))
   
   plot_data <- data.frame(x = rep(lrc_Q, n + 1), y = c(lrc_A, y), 
-                          a = factor(c(rep("measured", n), alpn),
+                          alpha = factor(c(rep("measured", n), alpn),
                                      level = c("measured", alp)))
   
-  plot68 <- ggplot(data = plot_data, aes(x, y, group = a, color=a)) + 
+  plot68 <- ggplot(data = plot_data, aes(x, y, group = alpha, color=alpha)) + 
     geom_point() + 
     geom_smooth(se = FALSE) + theme_bw()
   

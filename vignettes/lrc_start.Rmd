@@ -15,9 +15,9 @@ The method to achieve the goal is simple, to calculate the values of photosynthe
 
 note: we use ggplot2 to achieve the goal, as it reduce the code greatly and geom_smooth for the fitting, though it use `loess` for the fitting, our goal is to see the overlaping of these data, so it does not matter they use different models.
 
-```{r}
-library(lrc_start)
+```{r, message=FALSE}
+library(lrc.start)
 data("start64")
-plot_nonrec()
+plot_nonrec64(start64)
 ```
 
