@@ -1,0 +1,17 @@
+Type: Package
+Package: lrc.start
+Version: 0.0.1
+Title: light response curve fit start values For LI-6400 and LI-6800 
+Description: determin the range of the start values for light response curve.
+Authors@R: person("Jiedong", "Zhu", , "zhujiedong@yeah.net", c("aut", "cre"))
+Encoding: UTF-8
+Depends: R (>= 3.5.1)
+Imports: ggplot2, purrr
+LazyData: yes
+License: GPL-3
+Packaged: 2018-07-17
+Author: Jiedong Zhu [aut, cre]
+Maintainer: Jiedong Zhu <zhujiedong@yeah.net>
+RoxygenNote: 6.1.0
+Suggests: testthat, knitr, rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,23 @@
+---
+title: "determine the range of start values for light response curve"
+author: "Jiedong Zhu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{lrc_start}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+`lrc.start` aims to reduce the work when fit the light response curve models when analysis the data of LI-6400 and LI-6800. There are now three models for choosing: nonrectangular hyperbola–based models, hyperbolic tangent models and exponential based models.
+
+The method to achieve the goal is simple, to calculate the values of photosynthesis using the PAR of measured values, then plot the measured values and calculate the values in the same plot, to check the degree of the overlap between the measured ones and calculate ones, when using the different values of the model parameters, there should be a series of calculate values, the range of these parameters can be aquired when the calculate values overlap with the measured ones. We can judge directly form the plot.
+
+note: we use ggplot2 to achieve the goal, as it reduce the code greatly and geom_smooth for the fitting, though it use `loess` for the fitting, our goal is to see the overlaping of these data, so it does not matter they use different models.
+
+```{r}
+library(lrc_start)
+data("start64")
+plot_nonrec()
+```
+
