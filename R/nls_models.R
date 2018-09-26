@@ -30,10 +30,8 @@ fun_nonrec <- function(x, Am, alpha, Rd, theta) {
   4 * alpha * theta * Am * x)) - Rd
 }
 
-           
 fun_rec <- function(x, Am, alpha, Rd) {(alpha * x * Am) * 
     (1/(alpha * x + Am)) - Rd}
-
 
 fun_exp <- function(x, Am, Ic, b) {Am*(1-exp((-b)*(x-Ic)))}
 

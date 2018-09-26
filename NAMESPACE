@@ -2,7 +2,10 @@
 
 export(fun_nonrec)
 export(plot_exp64)
+export(plot_exp68)
 export(plot_nonrec64)
+export(plot_nonrec68)
 export(plot_rec64)
+export(plot_rec68)
 import(ggplot2)
 importFrom(purrr,pmap)
